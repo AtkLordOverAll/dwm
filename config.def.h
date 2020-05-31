@@ -100,6 +100,7 @@ static Key keys[] = {
     { MODKEY,			     XK_z,		        incrgaps,	    {.i = +3 } },
     { MODKEY,			     XK_x,		        incrgaps,	    {.i = -3 } },
 
+    { MODKEY,                XK_s,              togglesticky,   {0} },
 	{ MODKEY,                XK_space,          zoom,           {0} },
 	{ MODKEY,                XK_backslash,      view,           {0} },
 	{ MODKEY,                XK_0,              view,           {.ui = ~0 } },
