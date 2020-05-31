@@ -59,6 +59,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi_launcher", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+#include "selfrestart.c"
+
 static Key keys[] = {
     TAGKEYS(                 XK_1,                              0)
 	TAGKEYS(                 XK_2,                              1)
@@ -73,6 +75,7 @@ static Key keys[] = {
 	/* modifier              key                function        argument */
     { MODKEY,                XK_q,              killclient,     {0} }, /* close program */
     { MODKEY|ShiftMask,      XK_q,              quit,           {0} }, /* close dwm */
+    { MODKEY|ShiftMask,      XK_r,              self_restart,   {0} }, /* restart dwm */
 	{ MODKEY,                XK_d,              spawn,          {.v = dmenucmd } },
 	{ MODKEY,                XK_Return,         spawn,          {.v = termcmd } },
 
